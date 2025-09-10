@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initContactForm();
     // optimizeInitialLoad(); // disabled for Drive links
     initScrollBoosterGalleries();
+    initGalleryViewMore();
+    initVideoHoverLoading();
+    initLightbox();
 
     // Font preview removed for production
     
@@ -24,6 +27,216 @@ document.addEventListener('DOMContentLoaded', function() {
     
     console.log('✅ Website initialization complete');
 });
+
+// Video hover loading functionality for performance optimization
+function initVideoHoverLoading() {
+    console.log('🎬 Initializing video hover loading...');
+    
+    // Get all video elements
+    const videos = document.querySelectorAll('video.gallery-video');
+    
+    videos.forEach(video => {
+        // Store original source for lazy loading
+        const source = video.querySelector('source');
+        if (!source) return;
+        
+        const originalSrc = source.src;
+        const originalType = source.type;
+        
+        // Remove src initially to prevent loading
+        source.removeAttribute('src');
+        video.load(); // Reset video element
+        
+        // Add hover event listeners
+        const galleryItem = video.closest('.gallery-item');
+        if (!galleryItem) return;
+        
+        let isLoaded = false;
+        let loadTimeout;
+        
+        // Load video on hover
+        galleryItem.addEventListener('mouseenter', function() {
+            if (isLoaded) return;
+            
+            // Add small delay to prevent accidental loading
+            loadTimeout = setTimeout(() => {
+                if (!isLoaded) {
+                    source.src = originalSrc;
+                    source.type = originalType;
+                    video.load();
+                    isLoaded = true;
+                    console.log('📹 Video loaded on hover:', originalSrc);
+                }
+            }, 300); // 300ms delay
+        });
+        
+        // Cancel loading if user moves away quickly
+        galleryItem.addEventListener('mouseleave', function() {
+            if (loadTimeout) {
+                clearTimeout(loadTimeout);
+            }
+        });
+        
+        // Load on click (for both mobile and lightbox)
+        galleryItem.addEventListener('click', function(e) {
+            if (!isLoaded) {
+                source.src = originalSrc;
+                source.type = originalType;
+                video.load();
+                isLoaded = true;
+                console.log('📹 Video loaded on click:', originalSrc);
+            }
+            // Don't prevent default - let lightbox handle the click
+        });
+    });
+    
+    console.log(`✅ Video hover loading initialized for ${videos.length} videos`);
+}
+
+// Lightbox functionality for media viewing
+function initLightbox() {
+    console.log('🖼️ Initializing lightbox...');
+    
+    const lightboxModal = document.getElementById('lightbox-modal');
+    const lightboxContent = document.querySelector('.lightbox-content');
+    const lightboxMedia = document.querySelector('.lightbox-media');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    const lightboxPrev = document.getElementById('lightbox-prev');
+    const lightboxNext = document.getElementById('lightbox-next');
+    
+    if (!lightboxModal || !lightboxMedia) {
+        console.log('❌ Lightbox elements not found');
+        return;
+    }
+    
+    let currentMediaIndex = 0;
+    let currentMediaList = [];
+    
+    // Get all clickable media items
+    const mediaItems = document.querySelectorAll('.gallery-item img, .gallery-item video');
+    
+    // Open lightbox
+    function openLightbox(mediaElement, mediaList) {
+        currentMediaList = mediaList;
+        currentMediaIndex = mediaList.indexOf(mediaElement);
+        
+        if (currentMediaIndex === -1) return;
+        
+        displayMedia(mediaElement);
+        lightboxModal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+    
+    // Display media in lightbox
+    function displayMedia(mediaElement) {
+        lightboxMedia.innerHTML = '';
+        
+        if (mediaElement.tagName === 'IMG') {
+            const img = document.createElement('img');
+            img.src = mediaElement.src;
+            img.alt = mediaElement.alt || '';
+            img.style.maxWidth = '100%';
+            img.style.maxHeight = '90vh';
+            img.style.objectFit = 'contain';
+            lightboxMedia.appendChild(img);
+        } else if (mediaElement.tagName === 'VIDEO') {
+            const video = document.createElement('video');
+            video.controls = true;
+            video.autoplay = true;
+            video.muted = false;
+            video.style.maxWidth = '100%';
+            video.style.maxHeight = '90vh';
+            
+            const source = mediaElement.querySelector('source');
+            if (source) {
+                const newSource = document.createElement('source');
+                newSource.src = source.src;
+                newSource.type = source.type;
+                video.appendChild(newSource);
+            }
+            
+            lightboxMedia.appendChild(video);
+        }
+    }
+    
+    // Navigation functions
+    function showPrev() {
+        if (currentMediaIndex > 0) {
+            currentMediaIndex--;
+            displayMedia(currentMediaList[currentMediaIndex]);
+        }
+    }
+    
+    function showNext() {
+        if (currentMediaIndex < currentMediaList.length - 1) {
+            currentMediaIndex++;
+            displayMedia(currentMediaList[currentMediaIndex]);
+        }
+    }
+    
+    // Close lightbox
+    function closeLightbox() {
+        lightboxModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        
+        // Pause any playing videos
+        const video = lightboxMedia.querySelector('video');
+        if (video) {
+            video.pause();
+        }
+    }
+    
+    // Event listeners
+    mediaItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const section = this.closest('[data-section]');
+            const mediaList = section ? Array.from(section.querySelectorAll('.gallery-item img, .gallery-item video')) : [this];
+            openLightbox(this, mediaList);
+        });
+    });
+    
+    // Close button
+    if (lightboxClose) {
+        lightboxClose.addEventListener('click', closeLightbox);
+    }
+    
+    // Close on background click
+    if (lightboxModal) {
+        lightboxModal.addEventListener('click', function(e) {
+            if (e.target === lightboxModal) {
+                closeLightbox();
+            }
+        });
+    }
+    
+    // Navigation buttons
+    if (lightboxPrev) {
+        lightboxPrev.addEventListener('click', showPrev);
+    }
+    if (lightboxNext) {
+        lightboxNext.addEventListener('click', showNext);
+    }
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (lightboxModal.style.display === 'flex') {
+            switch(e.key) {
+                case 'Escape':
+                    closeLightbox();
+                    break;
+                case 'ArrowLeft':
+                    showPrev();
+                    break;
+                case 'ArrowRight':
+                    showNext();
+                    break;
+            }
+        }
+    });
+    
+    console.log('✅ Lightbox initialized');
+}
 
 // Navigation functionality
 function initNavigation() {
@@ -232,6 +445,215 @@ function optimizeInitialLoad() {
                 }
             }
         });
+    });
+}
+
+// Gallery View More functionality
+function initGalleryViewMore() {
+    const viewMoreBtn = document.getElementById('view-more-btn');
+    const featuredGallery = document.getElementById('featured-gallery');
+    
+    if (!viewMoreBtn || !featuredGallery) return;
+    
+    // Get all media from all sections
+    function getAllMedia() {
+        const allMedia = [];
+        
+        // Corporate videos
+        document.querySelectorAll('.corporate-section .gallery-item').forEach(item => {
+            const video = item.querySelector('video');
+            const img = item.querySelector('img');
+            if (video) {
+                allMedia.push({
+                    type: 'video',
+                    src: video.querySelector('source').src,
+                    poster: video.poster,
+                    category: 'Corporate Event'
+                });
+            } else if (img) {
+                allMedia.push({
+                    type: 'image',
+                    src: img.src,
+                    category: 'Corporate Event'
+                });
+            }
+        });
+        
+        // Wedding videos and images
+        document.querySelectorAll('.weddings-section .gallery-item').forEach(item => {
+            const video = item.querySelector('video');
+            const img = item.querySelector('img');
+            if (video) {
+                allMedia.push({
+                    type: 'video',
+                    src: video.querySelector('source').src,
+                    poster: video.poster,
+                    category: 'Wedding'
+                });
+            } else if (img) {
+                allMedia.push({
+                    type: 'image',
+                    src: img.src,
+                    category: 'Wedding'
+                });
+            }
+        });
+        
+        // Celebrity images
+        document.querySelectorAll('.celebrities-section .gallery-item').forEach(item => {
+            const img = item.querySelector('img');
+            const video = item.querySelector('video');
+            if (img) {
+                allMedia.push({
+                    type: 'image',
+                    src: img.src,
+                    category: 'Celebrity Event'
+                });
+            } else if (video) {
+                allMedia.push({
+                    type: 'video',
+                    src: video.querySelector('source').src,
+                    poster: video.poster,
+                    category: 'Celebrity Event'
+                });
+            }
+        });
+        
+        // Automobile images
+        document.querySelectorAll('.car-bike-section .gallery-item').forEach(item => {
+            const img = item.querySelector('img');
+            if (img) {
+                allMedia.push({
+                    type: 'image',
+                    src: img.src,
+                    category: 'Automobile Event'
+                });
+            }
+        });
+        
+        // Sports images and videos
+        document.querySelectorAll('.sports-section .gallery-item').forEach(item => {
+            const video = item.querySelector('video');
+            const img = item.querySelector('img');
+            if (video) {
+                allMedia.push({
+                    type: 'video',
+                    src: video.querySelector('source').src,
+                    poster: video.poster,
+                    category: 'Sports Event'
+                });
+            } else if (img) {
+                allMedia.push({
+                    type: 'image',
+                    src: img.src,
+                    category: 'Sports Event'
+                });
+            }
+        });
+        
+        // Concert videos and images
+        document.querySelectorAll('.concert-section .gallery-item').forEach(item => {
+            const video = item.querySelector('video');
+            const img = item.querySelector('img');
+            if (video) {
+                allMedia.push({
+                    type: 'video',
+                    src: video.querySelector('source').src,
+                    poster: video.poster,
+                    category: 'Concert & Fest'
+                });
+            } else if (img) {
+                allMedia.push({
+                    type: 'image',
+                    src: img.src,
+                    category: 'Concert & Fest'
+                });
+            }
+        });
+        
+        return allMedia;
+    }
+    
+    // Create gallery item HTML
+    function createGalleryItem(media, index) {
+        if (media.type === 'video') {
+            return `
+                <div class="gallery-item" data-index="${index}">
+                    <video class="gallery-video" loading="lazy" playsinline muted poster="${media.poster}" preload="metadata">
+                        <source src="${media.src}" type="video/mp4">
+                    </video>
+                </div>
+            `;
+        } else {
+            return `
+                <div class="gallery-item" data-index="${index}">
+                    <img class="gallery-image" src="${media.src}" loading="lazy" alt="${media.category}">
+                </div>
+            `;
+        }
+    }
+    
+    // Show all media
+    function showAllMedia() {
+        const allMedia = getAllMedia();
+        const currentItems = featuredGallery.querySelectorAll('.gallery-item').length;
+        
+        // If already showing all, scroll to top of gallery
+        if (currentItems >= allMedia.length) {
+            featuredGallery.scrollIntoView({ behavior: 'smooth' });
+            return;
+        }
+        
+        // Add remaining items
+        const remainingMedia = allMedia.slice(currentItems);
+        const newItemsHTML = remainingMedia.map((media, index) => 
+            createGalleryItem(media, currentItems + index)
+        ).join('');
+        
+        featuredGallery.insertAdjacentHTML('beforeend', newItemsHTML);
+        
+        // Update button text
+        viewMoreBtn.innerHTML = 'Back to Top';
+        
+        // Scroll to new items
+        setTimeout(() => {
+            const newItems = featuredGallery.querySelectorAll('.gallery-item');
+            if (newItems.length > 0) {
+                newItems[newItems.length - 1].scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center' 
+                });
+            }
+        }, 100);
+    }
+    
+    // Reset to featured view
+    function showFeaturedOnly() {
+        const allItems = featuredGallery.querySelectorAll('.gallery-item');
+        const featuredCount = 12; // Show only first 12 items
+        
+        // Remove extra items
+        for (let i = featuredCount; i < allItems.length; i++) {
+            allItems[i].remove();
+        }
+        
+        // Update button text
+        viewMoreBtn.innerHTML = 'View More';
+        
+        // Scroll to top of gallery
+        featuredGallery.scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    // Event listener
+    viewMoreBtn.addEventListener('click', function() {
+        const currentItems = featuredGallery.querySelectorAll('.gallery-item').length;
+        const allMedia = getAllMedia();
+        
+        if (currentItems < allMedia.length) {
+            showAllMedia();
+        } else {
+            showFeaturedOnly();
+        }
     });
 }
 
