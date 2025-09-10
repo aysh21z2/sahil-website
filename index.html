@@ -48,17 +48,10 @@
     <!-- Font Awesome - Load only essential icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     
-    <!-- CSS - Load asynchronously for better performance -->
-    <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="css/animations.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="css/responsive.css" media="print" onload="this.media='all'">
-    
-    <!-- Fallback for CSS -->
-    <noscript>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/animations.css">
-        <link rel="stylesheet" href="css/responsive.css">
-    </noscript>
+    <!-- CSS - Load immediately to ensure filters work -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
     <!-- Navigation -->
