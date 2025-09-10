@@ -7,7 +7,6 @@
     <meta name="description" content="Sahil Bajaj - India's premier emcee for corporate events, weddings, and celebrity functions. Make your event unforgettable with professional hosting services.">
     
     <!-- Performance Optimizations -->
-    <link rel="preload" href="https://sahilbajaj.in/assets/videos/hero-background.mp4" as="video" type="video/mp4">
     <link rel="preload" href="https://sahilbajaj.in/assets/images/impact-bg.jpg" as="image">
     
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
@@ -37,30 +36,17 @@
         * { box-sizing: border-box; }
     </style>
     
-    <!-- Google Fonts - Chosen families -->
+    <!-- Google Fonts - Optimized (only essential) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     
     <!-- Font Awesome - Load only essential icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     
-    <!-- Non-critical CSS - Load asynchronously -->
-    <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="css/animations.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="css/responsive.css" media="print" onload="this.media='all'">
-    
-    <!-- Fallback for CSS -->
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Critical CSS - Load immediately -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
-    </noscript>
 </head>
 <body>
     <!-- Navigation -->
@@ -93,7 +79,7 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-video-container">
-            <video autoplay muted loop playsinline class="hero-video" poster="https://sahilbajaj.in/assets/images/impact-bg.jpg">
+            <video autoplay muted loop playsinline class="hero-video" poster="https://sahilbajaj.in/assets/images/impact-bg.jpg" preload="metadata">
                 <source src="https://sahilbajaj.in/assets/videos/hero-background.mp4" type="video/mp4">
                 <!-- Fallback background image -->
             </video>
