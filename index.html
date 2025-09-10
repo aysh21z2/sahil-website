@@ -1,0 +1,617 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil Bajaj - India's Premier Emcee | Corporate Events | Weddings | Celebrity Host</title>
+    <meta name="description" content="Sahil Bajaj - India's premier emcee for corporate events, weddings, and celebrity functions. Make your event unforgettable with professional hosting services.">
+    
+    <!-- Performance Optimizations -->
+    <link rel="preload" href="https://sahilbajaj.in/assets/videos/hero-background.mp4" as="video" type="video/mp4">
+    <link rel="preload" href="https://sahilbajaj.in/assets/images/impact-bg.jpg" as="image">
+    
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Critical CSS Inline -->
+    <style>
+        /* Critical CSS for above-the-fold content */
+        .hero { height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
+        .hero-video-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; }
+        .hero-video { width: 100%; height: 100%; object-fit: cover; }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 1; }
+        .hero-content { position: relative; z-index: 10; max-width: 800px; padding: 0 2rem; }
+        .hero-title { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 700; margin-bottom: 1rem; color: #FFFFFF; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); }
+        .hero-subtitle { font-size: 1.1rem; color: #E0E0E0; margin-bottom: 2rem; }
+        .cta-button { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); color: #FFFFFF; text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 1.1rem; transition: 0.3s ease; }
+        .cta-button:hover { transform: translateY(-2px); background: rgba(255, 255, 255, 0.2); }
+        .navbar { position: fixed; top: 0; width: 100%; background: rgba(15, 15, 15, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); z-index: 1000; }
+        .nav-container { max-width: 1400px; margin: 0 auto; padding: 0 5%; display: flex; justify-content: space-between; align-items: center; height: 80px; }
+        .nav-logo h2 { font-size: 1.8rem; color: #FFD700; letter-spacing: 2px; }
+        .nav-menu { display: flex; list-style: none; gap: 2rem; }
+        .nav-link { color: #FFFFFF; text-decoration: none; font-weight: 500; transition: 0.2s ease; }
+        .nav-link:hover { color: #FFD700; }
+        body { font-family: 'Inter', sans-serif; background-color: #0F0F0F; color: #FFFFFF; line-height: 1.6; margin: 0; padding: 0; }
+        * { box-sizing: border-box; }
+    </style>
+    
+    <!-- Google Fonts - Chosen families -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome - Load only essential icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    
+    <!-- Non-critical CSS - Load asynchronously -->
+    <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/animations.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/responsive.css" media="print" onload="this.media='all'">
+    
+    <!-- Fallback for CSS -->
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    </noscript>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Sahil Bajaj</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#corporate" class="nav-link">Corporate Events</a></li>
+                <li><a href="#weddings" class="nav-link">Weddings</a></li>
+                <li><a href="#celebrities" class="nav-link">Celebrities</a></li>
+                <li><a href="#car-bike" class="nav-link">Automobile Events</a></li>
+                <li><a href="#sports" class="nav-link">Sports Events</a></li>
+                <li><a href="#concert" class="nav-link">Concert & Fest</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-video-container">
+            <video autoplay muted loop playsinline class="hero-video" poster="https://sahilbajaj.in/assets/images/impact-bg.jpg">
+                <source src="https://sahilbajaj.in/assets/videos/hero-background.mp4" type="video/mp4">
+                <!-- Fallback background image -->
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title" id="hero-title">
+                Make Your Event Unforgettable<br>with India's Premier Emcee â€“ Sahil Bajaj
+            </h1>
+            <p class="hero-subtitle" id="hero-subtitle">Professional Hosting for Corporate Events, Weddings & Celebrity Functions</p>
+            <a href="#contact" class="cta-button" id="hero-button">Book Sahil Now</a>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Impact + Typewriter Section -->
+    <section class="impact-section" id="impact">
+        <div class="impact-background">
+            <!-- Background image will be added here -->
+        </div>
+        <div class="impact-overlay"></div>
+        <div class="impact-content">
+            <div class="impact-grid">
+                <!-- Left Side - Counters -->
+                <div class="counters-container">
+                    <div class="counter-item" data-target="200">
+                        <span class="counter-number">0</span>
+                        <span class="counter-plus">+</span>
+                        <p class="counter-label">Shows</p>
+                    </div>
+                    <div class="counter-item" data-target="150">
+                        <span class="counter-number">0</span>
+                        <span class="counter-plus">+</span>
+                        <p class="counter-label">Weddings</p>
+                    </div>
+                    <div class="counter-item" data-target="100">
+                        <span class="counter-number">0</span>
+                        <span class="counter-plus">+</span>
+                        <p class="counter-label">Corporates</p>
+                    </div>
+                    <div class="counter-item" data-target="50">
+                        <span class="counter-number">0</span>
+                        <span class="counter-plus">+</span>
+                        <p class="counter-label">Fashion Shows</p>
+                    </div>
+                    <div class="counter-item" data-target="75">
+                        <span class="counter-number">0</span>
+                        <span class="counter-plus">+</span>
+                        <p class="counter-label">Live Concerts</p>
+                    </div>
+                </div>
+                
+                <!-- Right Side - Typewriter -->
+                <div class="typewriter-container">
+                    <h3>Trusted by Leading Brands</h3>
+                    <div class="typewriter-text" id="typewriter">
+                        <span class="typewriter-cursor">|</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Events Section -->
+    <section class="corporate-section" id="corporate">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">CORPORATE EVENTS</h2>
+            </div>
+            <div class="sb-gallery" data-section="corporate">
+                <div class="sb-track">
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/corporate/WAL_Sahil Bajaj.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/WAL_Sahil Bajaj.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/corporate/Unacademy Final_Sahil Bajaj.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/Unacademy Final_Sahil Bajaj.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/corporate/Taco Bell_Sahil Bajaj.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/Taco Bell_Sahil Bajaj.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/corporate/Synergy(Amir Khan)_Sahil Bajaj.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/Synergy(Amir Khan)_Sahil Bajaj.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/corporate/Spotlight Event_SahilBajaj Subtitles.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/Spotlight Event_SahilBajaj Subtitles.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/corporate/Sonalika_Sahil bajaj.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/Sonalika_Sahil bajaj.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/corporate/Sahil Bajaj_Coca Cola.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/Sahil Bajaj_Coca Cola.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/corporate/max estates.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/max estates.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/corporate/m3m.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/m3m.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/corporate/m3m diwali.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/m3m diwali.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/corporate/LIMCA_Sahil Bajaj.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/LIMCA_Sahil Bajaj.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/corporate/HT City Foodies_Sahil Bajaj Final.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/HT City Foodies_Sahil Bajaj Final.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/corporate/Hero Housing Finance X Sahil bajaj.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/Hero Housing Finance X Sahil bajaj.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/corporate/Elf Day 02_Sahil Bajaj.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/Elf Day 02_Sahil Bajaj.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/corporate/ELF Day 01_Sahil Bajaj.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/ELF Day 01_Sahil Bajaj.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/corporate/Bhagat singh_SahilBajaj.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/Bhagat singh_SahilBajaj.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/corporate/MVI_8663.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/MVI_8663.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/corporate/MVI_6375.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/MVI_6375.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/corporate/MVI_5710.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/MVI_5710.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/corporate/MVI_5293.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/MVI_5293.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/corporate/MVI_4050.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/MVI_4050.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/corporate/MVI_3406.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/MVI_3406.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/corporate/MVI_2752.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/MVI_2752.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/corporate/MVI_0965.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/MVI_0965.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/corporate/795A7024.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/795A7024.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/corporate/795A1932.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/795A1932.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/corporate/795A1335.jpg"><source src="https://sahilbajaj.in/assets/videos/corporate/795A1335.mp4" type="video/mp4"></video></div>
+                    <!-- Append corporate still photos (copy to assets/images/corporate before load) -->
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/corporate/IMG_0509.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/corporate/IMG_0549.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/corporate/795A1754.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/corporate/795A2009.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/corporate/795A2108.JPG" loading="lazy" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weddings Section -->
+    <section class="weddings-section" id="weddings">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">WEDDINGS</h2>
+            </div>
+            <div class="sb-gallery" data-section="weddings">
+                <div class="sb-track">
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/weddings/Wedding Showreel_Sahil Bajaj.jpg"><source src="https://sahilbajaj.in/assets/videos/weddings/Wedding Showreel_Sahil Bajaj.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/weddings/Milind Gaba Wedding_Sahil Bajaj.jpg"><source src="https://sahilbajaj.in/assets/videos/weddings/Milind Gaba Wedding_Sahil Bajaj.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/weddings/Jaipur Wedding Youtube 01 with subtitles.jpg"><source src="https://sahilbajaj.in/assets/videos/weddings/Jaipur Wedding Youtube 01 with subtitles.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/weddings/Jaipur Leela Wedding_Sahil Bajaj.jpg"><source src="https://sahilbajaj.in/assets/videos/weddings/Jaipur Leela Wedding_Sahil Bajaj.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/weddings/795A7942.jpg"><source src="https://sahilbajaj.in/assets/videos/weddings/795A7942.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/weddings/795A7283.jpg"><source src="https://sahilbajaj.in/assets/videos/weddings/795A7283.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/weddings/795A7099.jpg"><source src="https://sahilbajaj.in/assets/videos/weddings/795A7099.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/weddings/795A7091.jpg"><source src="https://sahilbajaj.in/assets/videos/weddings/795A7091.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/weddings/795A6727.jpg"><source src="https://sahilbajaj.in/assets/videos/weddings/795A6727.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/weddings/795A5228.jpg"><source src="https://sahilbajaj.in/assets/videos/weddings/795A5228.mp4" type="video/mp4"></video></div>
+                    <!-- Append weddings still photos -->
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/weddings/IMG_0202.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/weddings/IMG_4121.JPG" loading="lazy" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Celebrity Events Section -->
+    <section class="celebrities-section" id="celebrities">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">CELEBRITY EVENTS</h2>
+            </div>
+            <div class="sb-gallery" data-section="celebrities">
+                <div class="sb-track">
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/celeb/PVR Edit_Sahil Bajaj.jpg"><source src="https://sahilbajaj.in/assets/videos/celeb/PVR Edit_Sahil Bajaj.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/celeb/PVR 25 years_Sahil Bajaj.jpg"><source src="https://sahilbajaj.in/assets/videos/celeb/PVR 25 years_Sahil Bajaj.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/celeb/Love Aaj Kal 2020.jpg"><source src="https://sahilbajaj.in/assets/videos/celeb/Love Aaj Kal 2020.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/celeb/kangua movie promption.jpg"><source src="https://sahilbajaj.in/assets/videos/celeb/kangua movie promption.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/celeb/Jigra  (Sahil Bajaj).jpg"><source src="https://sahilbajaj.in/assets/videos/celeb/Jigra  (Sahil Bajaj).mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/celeb/baby john varun dhavan.jpg"><source src="https://sahilbajaj.in/assets/videos/celeb/baby john varun dhavan.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/celeb/MVI_1971.jpg"><source src="https://sahilbajaj.in/assets/videos/celeb/MVI_1971.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/celeb/MVI_1689.jpg"><source src="https://sahilbajaj.in/assets/videos/celeb/MVI_1689.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/celeb/795A2144.jpg"><source src="https://sahilbajaj.in/assets/videos/celeb/795A2144.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/celeb/795A1260.jpg"><source src="https://sahilbajaj.in/assets/videos/celeb/795A1260.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/celeb/46.jpg"><source src="https://sahilbajaj.in/assets/videos/celeb/46.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/celeb/41.jpg"><source src="https://sahilbajaj.in/assets/videos/celeb/41.mp4" type="video/mp4"></video></div>
+                    <!-- Celebrities still photos -->
+                    <!-- Batch 1: Aâ€“D (named-first) -->
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Aamir Khan 3.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Aamir Khan.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/ABCD2 (5).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Bajrangi Bhaijaan (1).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Bajrangi Bhaijaan (23).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Bajrangi Bhaijaan (4).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Bhool Bhulaiyya 2.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Boman Irani.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Bombay Velvet (1).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Chennai Express (3).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Daler Mahendi.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Deepika Ranveer.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Dhadak.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Dil Dhakdne Do (12).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Dil Dhakdne Do (25).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Dil Dhakdne Do (3).JPG" loading="lazy" alt=""></div>
+                    <!-- Batch 2: Dâ€“H (named-first) -->
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Dishoom (1).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Dishoom (13).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Dishoom (3).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Dream Girl (1).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Dream Girl (4).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Ek Thi Dayen.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Gabbar is Back (1).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Harddy Sandhu.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/harry met sejal (1).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/harry met sejal (2).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/harry met sejal (4).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/harry met sejal (7).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Housefull 3 (4).JPG" loading="lazy" alt=""></div>
+                    <!-- Batch 3: Iâ€“M (named-first) -->
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/IMG_0210.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/IMG_3441-1.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/IMG_4565.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/IMG_5704.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Jabariya Jodi (3).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Jabariya Jodi (6).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Jasmine Sandalas.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Jassi Gill.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/John Abrahim.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Kalank (1).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Kalank (3).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Kapil Dev.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Ki and Ka (2).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Mandira bEDI.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Mika Singh copy.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Mika Singh.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Milind Gaba copy.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Milind Gaba.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Milind Soman.jpg" loading="lazy" alt=""></div>
+                    <!-- Batch 4: Râ€“V (named-first) -->
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Raftaar.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Roohi.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/RRR copy.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Shamshera.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Sky is Pink (3).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Sui Dhaaga (3).jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Sukhbir.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Talwar (1).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Tiger Shroff Disha Patani.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Varun Dhawan.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Varun Kriti.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/Veere Di Wedding.JPG" loading="lazy" alt=""></div>
+                    <!-- Batch 5: numerics and dated -->
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/795A3327.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/795A3360.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/795A6770.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/795A7520.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/8.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/9.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/11.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/13.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/13.png" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/14.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/17.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/18.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/20.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/21.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/22 2.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/22.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/23.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/25.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/26.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/31.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/3.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/4.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/5.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/6.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/7.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/1 (2).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/1 (4).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/1 2.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/1.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/2.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/20151129_211654(0)-1.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/20220211_010859.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/20221023_032238.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/celeb/20230223_004614.jpg" loading="lazy" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Car and Bike Events Section -->
+    <section class="car-bike-section" id="car-bike">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">AUTOMOBILE EVENTS</h2>
+            </div>
+            <div class="sb-gallery" data-section="automobile">
+                <div class="sb-track">
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/automobile/1.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/automobile/34.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/automobile/36.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/automobile/050.JPG" loading="lazy" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sports Events Section -->
+    <section class="sports-section" id="sports">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">SPORTS EVENTS</h2>
+            </div>
+            <div class="sb-gallery" data-section="sports">
+                <div class="sb-track">
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/sports/795A5948.jpg"><source src="https://sahilbajaj.in/assets/videos/sports/795A5948.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/sports/MVI_7575.jpg"><source src="https://sahilbajaj.in/assets/videos/sports/MVI_7575.mp4" type="video/mp4"></video></div>
+                    <!-- Append sports still photos (exclude the two video posters to avoid duplicates) -->
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/sports/El-Classico Match Screening for 15000 plus audience.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/sports/IMG_9809.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/sports/line 2.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/sports/sport based 1.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/sports/20141128_194922-2.jpg" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/sports/IMG_0043.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/sports/IMG_3167.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/sports/IMG_6315.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/sports/IMG_6341.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/sports/795A4328.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/sports/795A4338.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/sports/795A5601.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/sports/795A6144.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/sports/10.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/sports/12.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/sports/3.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/sports/1.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/sports/1 (2).JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/sports/line 1.1.JPG" loading="lazy" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Concert Fest Section -->
+    <section class="concert-section" id="concert">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">CONCERT & FEST</h2>
+            </div>
+            <div class="sb-gallery" data-section="concert">
+                <div class="sb-track">
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" playsinline muted poster="https://sahilbajaj.in/assets/images/concert/roadies.jpg"><source src="https://sahilbajaj.in/assets/videos/concert/roadies.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/concert/MVI_8414.jpg"><source src="https://sahilbajaj.in/assets/videos/concert/MVI_8414.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item"><video class="gallery-video" preload="metadata" poster="https://sahilbajaj.in/assets/images/concert/MVI_6935.jpg"><source src="https://sahilbajaj.in/assets/videos/concert/MVI_6935.mp4" type="video/mp4"></video></div>
+                    <!-- Append concert still photos -->
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/concert/IMG_4120.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/concert/DSC_7204.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/concert/DSC_7136.JPG" loading="lazy" alt=""></div>
+                    <div class="gallery-item"><img class="gallery-image" src="https://sahilbajaj.in/assets/images/concert/20221023_032238.jpg" loading="lazy" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="section-container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://sahilbajaj.in/assets/images/sahil-portrait.jpeg" alt="Sahil Bajaj" class="about-portrait" style="width: 100%; height: 600px; object-fit: contain; border-radius: 20px;">
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">About Sahil Bajaj</h2>
+                    <p class="about-description">
+                        Sahil Bajaj is not just a host â€” he's the pulse of your event. With over a decade of experience in the entertainment industry, Sahil has mastered the art of creating unforgettable moments that leave lasting impressions. His dynamic personality, quick wit, and ability to connect with audiences of all sizes make him the go-to choice for India's most prestigious events.
+                    </p>
+                    <p class="about-description">
+                        From intimate corporate gatherings to grand celebrity weddings, Sahil brings energy, professionalism, and a touch of magic to every occasion. His expertise spans across corporate events, destination weddings, fashion shows, award ceremonies, and live concerts, making him a versatile and reliable choice for any event.
+                    </p>
+                    
+                    <!-- Star Rating -->
+                    <div class="rating-container">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-text">5.0 Rating from 200+ Events</span>
+                    </div>
+
+                    <!-- Testimonials -->
+                    <div class="testimonials">
+                        <div class="testimonial-card">
+                            <p>"Sahil made our wedding reception absolutely magical. His energy was infectious!"</p>
+                            <div class="testimonial-author">- Ananya & Rohan</div>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>"Professional, engaging, and perfect for our corporate event. Highly recommended!"</p>
+                            <div class="testimonial-author">- EY India</div>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>"The best emcee we've worked with. Sahil knows how to keep the crowd entertained."</p>
+                            <div class="testimonial-author">- Weddings by Design</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="section-container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-image-placeholder">Portfolio media will be available soon.</div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2 class="cta-title">Ready to Elevate Your Event?</h2>
+            <p class="cta-subtitle">Let's create a moment your guests will remember forever.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="cta-button primary">Book Sahil Now</a>
+                <a href="tel:+919899640505" class="cta-button secondary">
+                    <i class="fas fa-phone"></i>
+                    Call or WhatsApp: +91-9899640505
+                </a>
+                <a href="mailto:sahil@sahilbajaj.in" class="cta-button secondary">
+                    <i class="fas fa-envelope"></i>
+                    sahil@sahilbajaj.in
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section" id="contact">
+        <div class="section-container">
+            <h2 class="section-title">Contact Sahil Today</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventType">Type of Event</label>
+                        <select id="eventType" name="eventType" required>
+                            <option value="">Select Event Type</option>
+                            <option value="corporate">Corporate Event</option>
+                            <option value="wedding">Wedding</option>
+                            <option value="celebrity">Celebrity Event</option>
+                            <option value="fashion">Fashion Show</option>
+                            <option value="concert">Live Concert</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us about your event..."></textarea>
+                </div>
+                <button type="submit" class="submit-button">
+                    <span>Submit Inquiry</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sahil Bajaj</h3>
+                    <p>India's Premier Emcee</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com/sahilbajaj_official" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                            @sahilbajaj_official
+                        </a>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                            YouTube Highlights
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sahil Bajaj. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919899640505" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript - Load asynchronously -->
+    <script src="https://unpkg.com/scrollbooster@2.3.5/dist/scrollbooster.min.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/contact.js" defer></script>
+</body>
+</html> 
+

@@ -1,0 +1,29 @@
+# Exclude large asset folders from Vercel deployment
+_assets_local/
+_originals/
+node_modules/
+rclone/
+tmp/
+
+# Exclude backup files
+*.bak
+*.bak.fn
+
+# Exclude development files
+*.code-workspace
+compress_videos.bat
+upload-to-r2.ps1
+upload-videos-to-r2.ps1
+
+# Exclude large media files (these are served from R2 CDN)
+*.MP4
+*.mp4
+*.JPG
+*.jpg
+*.PNG
+*.png
+*.jpeg
+*.JPEG
+
+# Keep only essential files for deployment
+# HTML, CSS, JS, and configuration files will be deployed

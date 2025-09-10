@@ -1,0 +1,53 @@
+# Dependencies
+node_modules/
+
+# Large asset folders (served from R2 CDN)
+_assets_local/
+_originals/
+assets/
+
+# Development tools
+rclone/
+tmp/
+
+# Backup files
+*.bak
+*.bak.fn
+
+# Development scripts
+compress_videos.bat
+upload-to-r2.ps1
+upload-videos-to-r2.ps1
+
+# IDE files
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
+
+# Media files (served from R2 CDN)
+*.jpg
+*.jpeg
+*.png
+*.mp4
+*.mov
+*.avi
+
+# Development files
+*.zip
+*.csv
+*.json
+*.md
+live-preview.html
+wix-editor.html
+
+# Scripts
+scripts/
